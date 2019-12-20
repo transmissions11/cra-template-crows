@@ -13,4 +13,4 @@ _All template strings to be replaced are in `SCREAMING_SNAKE_CASE`_
 
 - **SHORT_DESCRIPTION:** A short description of your app.
 
-  - Example: "Tinder for dogs", "Chat for the 21st century"
+  - Examples: "Tinder for dogs", "Chat for the 21st century"
