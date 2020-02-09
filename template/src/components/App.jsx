@@ -1,5 +1,5 @@
 import React from "react";
 
 export default function App() {
-  return <div></div>;
+  return <div>cra-template-crows has completed initalizing your project!</div>;
 }
