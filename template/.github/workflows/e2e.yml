@@ -6,16 +6,8 @@ jobs:
   e2e:
     runs-on: ubuntu-16.04
 
-    strategy:
-      matrix:
-        node-version: [8.x, 10.x, 12.x]
-
     steps:
       - uses: actions/checkout@v2
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
-        with:
-          node-version: ${{ matrix.node-version }}
 
       - name: Cypress Run
         uses: cypress-io/github-action@v1
@@ -23,7 +15,6 @@ jobs:
           start: npm start
           wait-on: "http://localhost:3000"
 
-          tag: node-${{ matrix.node-version }}
           record: true
         env:
           # pass the Dashboard record key as an environment variable
