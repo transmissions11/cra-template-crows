@@ -7,11 +7,11 @@ Transmissions's template for quick and easy React apps.
 Use your editor's find all in path tool to replace these template strings.
 _All template strings to be replaced are in `SCREAMING_SNAKE_CASE`_
 
-- `YOUR_APP`: The short, human readable name of your app.
+- [ ] `YOUR_APP`: The short, human readable name of your app.
 
   - Examples: "Discord", "PhotoShop Mix"
 
-- `SHORT_DESCRIPTION`: A short description of your app.
+- [ ] `SHORT_DESCRIPTION`: A short description of your app.
   - Examples: "Tinder for dogs", "Chat for the 21st century"
 
 ## Add these Github Secrets
