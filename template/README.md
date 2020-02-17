@@ -18,7 +18,7 @@ _All template strings to be replaced are in `SCREAMING_SNAKE_CASE`_
 - [ ] `SHORT_DESCRIPTION`: A short description of your app.
   - Example: "Tinder for dogs", "Chat for the 21st century"
 
-## [DELETE THIS] Add these Github Secrets
+## [DELETE THIS] Add these Github Secrets [DELETE THIS]
 
 - [ ] `CYPRESS_RECORD_KEY`: You'll get this by following this tutorial: https://docs.cypress.io/guides/dashboard/projects.html#Setup
 
