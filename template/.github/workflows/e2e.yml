@@ -12,10 +12,13 @@ jobs:
       - name: Cypress Run
         uses: cypress-io/github-action@v1
         with:
+          # Passing environment variables here will pass them as Cypress Environment Variables (https://docs.cypress.io/guides/guides/environment-variables.html), and will not be accessible to the start script
+          # env: DATABASE_URL=${{ secrets.DATABASE_URL }}
+
           start: npm start
           wait-on: "http://localhost:3000"
 
           record: true
         env:
-          # pass the Dashboard record key as an environment variable
+          # These environment variables will be picked up by the start script
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}

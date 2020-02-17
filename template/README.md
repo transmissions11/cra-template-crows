@@ -20,7 +20,7 @@ _All template strings to be replaced are in `SCREAMING_SNAKE_CASE`_
 
 ## [DELETE THIS] Add these Github Secrets
 
-- `CYPRESS_RECORD_KEY`: You'll get this by following this tutorial: https://docs.cypress.io/guides/dashboard/projects.html#Setup
+- [ ] `CYPRESS_RECORD_KEY`: You'll get this by following this tutorial: https://docs.cypress.io/guides/dashboard/projects.html#Setup
 
 ## Available Scripts
 
