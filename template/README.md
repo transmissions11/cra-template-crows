@@ -6,18 +6,21 @@ SHORT_DESCRIPTION
 
 - **PWA:** You can add YOUR_APP to your homescreen and get a near native expirence.
 
-
 ## [DELETE THIS] Replace these template strings [DELETE THIS]
 
 Use your editor's find all in path tool to replace these template strings.
 _All template strings to be replaced are in `SCREAMING_SNAKE_CASE`_
 
 - [ ] `YOUR_APP`: The short, human readable name of your app.
+
   - Examples: "Discord", "PhotoShop Mix"
 
 - [ ] `SHORT_DESCRIPTION`: A short description of your app.
   - Example: "Tinder for dogs", "Chat for the 21st century"
 
+## [DELETE THIS] Add these Github Secrets
+
+- `CYPRESS_RECORD_KEY`: You'll get this by following this tutorial: https://docs.cypress.io/guides/dashboard/projects.html#Setup
 
 ## Available Scripts
 
