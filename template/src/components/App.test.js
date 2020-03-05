@@ -4,6 +4,6 @@ import App from "./App";
 
 test("renders finished message", () => {
   const { getByText } = render(<App />);
-  const finishedMessage = getByText(/Hello World!/i);
-  expect(finishedMessage).toBeInTheDocument();
+  const helloWorld = getByText(/hello world/i);
+  expect(helloWorld).toBeInTheDocument();
 });
