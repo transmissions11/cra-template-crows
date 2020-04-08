@@ -7,6 +7,8 @@ import * as serviceWorker from "./serviceWorker";
 
 import "./index.css";
 
+import PWAPrompt from "react-ios-pwa-prompt";
+
 import { ThemeProvider, CSSReset, theme } from "@chakra-ui/core";
 
 ReactDOM.render(
