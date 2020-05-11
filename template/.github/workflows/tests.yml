@@ -1,15 +1,15 @@
-name: End-to-End Tests
+name: Tests
 
 on: [push]
 
 jobs:
-  e2e:
+  e2e-and-unit:
     runs-on: ubuntu-16.04
 
     steps:
       - uses: actions/checkout@v2
 
-      - name: Cypress Run
+      - name: Run our Cypress E2E tests
         uses: cypress-io/github-action@v1
         with:
           # Passing environment variables here will pass them as Cypress Environment Variables (https://docs.cypress.io/guides/guides/environment-variables.html), and will not be accessible to the start script
@@ -22,3 +22,17 @@ jobs:
         env:
           # These environment variables will be picked up by the start script
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+
+      - name: Run unit tests with coverage
+        run: npm run unit-test
+        env:
+          CI: true
+
+      - name: Merge our test reports
+        run: npm run merge-test-reports
+
+      - name: Upload our test coverage to Codecov
+        uses: codecov/codecov-action@v1
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          fail_ci_if_error: true

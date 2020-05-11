@@ -1,16 +1,16 @@
 {
   "name": "cra-template-crows",
-  "version": "5.3.1",
+  "version": "6.0.0",
   "keywords": [
     "react",
     "cypress",
     "create-react-app",
     "template"
   ],
-  "description": "Transmission's create-react-app template",
+  "description": "TransmissionDev's create-react-app template",
   "license": "MIT",
   "engines": {
-    "node": ">=8"
+    "node": ">=10"
   },
   "main": "template.json",
   "files": [
