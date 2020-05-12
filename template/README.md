@@ -1,4 +1,4 @@
-# YOUR_APP &middot; ![Crows](https://img.shields.io/badge/Made%20with-Crows-black?logo=react&logoColor=white) &middot; ![Tests](https://github.com/GITHUB_URL_SUFFIX/workflows/Tests/badge.svg) &middot; [![Coverage Status](https://coveralls.io/repos/github/GITHUB_URL_SUFFIX/badge.svg?branch=master)](https://coveralls.io/github/GITHUB_URL_SUFFIX?branch=master)
+# YOUR_APP &middot; [![Made With Crows](https://img.shields.io/badge/Made%20with-Crows-black?logo=react&logoColor=white)](https://github.com/transmissionsdev/cra-template-crows)] &middot; ![Tests](https://github.com/GITHUB_URL_SUFFIX/workflows/Tests/badge.svg) &middot; [![Coverage Status](https://coveralls.io/repos/github/GITHUB_URL_SUFFIX/badge.svg?branch=master)](https://coveralls.io/github/GITHUB_URL_SUFFIX?branch=master)
 
 SHORT_DESCRIPTION
 
