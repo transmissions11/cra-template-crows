@@ -1,4 +1,4 @@
-# YOUR_APP &middot; ![Crows](https://img.shields.io/badge/Made%20with-Crows-black?logo=react&logoColor=white) &middot; ![Tests](https://github.com/GITHUB_URL_SUFFIX/workflows/Tests/badge.svg) &middot; [![codecov](https://codecov.io/gh/GITHUB_URL_SUFFIX/branch/master/graph/badge.svg)](https://codecov.io/gh/GITHUB_URL_SUFFIX)
+# YOUR_APP &middot; ![Crows](https://img.shields.io/badge/Made%20with-Crows-black?logo=react&logoColor=white) &middot; ![Tests](https://github.com/GITHUB_URL_SUFFIX/workflows/Tests/badge.svg) &middot; [![Coverage Status](https://coveralls.io/repos/github/GITHUB_URL_SUFFIX/badge.svg?branch=master)](https://coveralls.io/github/GITHUB_URL_SUFFIX?branch=master)
 
 SHORT_DESCRIPTION
 
@@ -28,7 +28,5 @@ _All template strings to be replaced are in `SCREAMING_SNAKE_CASE`_
   - Example: "transmissionsdev/cra-template-crows", "facebook/jest"
 
 ## [DELETE THIS] Add these Github Secrets [DELETE THIS]
-
-- [ ] `CODECOV_TOKEN`: The unique repository upload token is found on the settings page of your project. https://codecov.io/gh/<owner>/<repo>/settings.
 
 - [ ] `CYPRESS_RECORD_KEY`: You'll get this by following this tutorial: https://docs.cypress.io/guides/dashboard/projects.html#Setup
