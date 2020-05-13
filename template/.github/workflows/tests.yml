@@ -18,7 +18,7 @@ jobs:
           start: npm start
           wait-on: "http://localhost:3000"
 
-          record: true
+          record: ${{ contains(github.event_name, 'push') }}
         env:
           # These environment variables will be picked up by the start script
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
