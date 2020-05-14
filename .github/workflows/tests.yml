@@ -31,9 +31,9 @@ jobs:
 
       - name: Run unit tests with coverage
         run: npm run unit-test
-        working-directory: ./test-app
         env:
           CI: true
+        working-directory: ./test-app
 
       - name: Merge our test reports
         run: npx merge-cypress-jest-coverage
