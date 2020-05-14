@@ -14,6 +14,9 @@ jobs:
         with:
           node-version: '12.x'
           
+      - name: List directory
+        run: ls    
+          
       - name: Create app directory from template
         run: npx create-react-app test-app --template file:./cra-template-crows
 
