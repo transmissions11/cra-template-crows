@@ -8,7 +8,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      
+
       - name: Create app directory from template
         run: npx create-react-app test-app --template file:./cra-template-crows
         working-directory: ../
@@ -29,9 +29,11 @@ jobs:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           REACT_APP_FIREBASE_DATABASE_URL: ${{ secrets.REACT_APP_FIREBASE_DATABASE_URL }}
           REACT_APP_FIREBASE_API_KEY: ${{ secrets.REACT_APP_FIREBASE_API_KEY }}
-    
+
       - name: Run unit tests with coverage
-        run: npm run unit-test
+        run: |
+          ls
+          npm run unit-test
         working-directory: ../test-app
         env:
           CI: true
