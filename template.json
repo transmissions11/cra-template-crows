@@ -25,7 +25,7 @@
     "start": "react-scripts -r @cypress/instrument-cra start",
     "build": "react-scripts build",
     "eject": "react-scripts eject",
-    "unit-test": "react-scripts test --watchAll=false --coverageDirectory='jest-coverage' --coverage",
+    "unit-test": "react-scripts test --coverage --watchAll=false --coverageDirectory='jest-coverage'",
     "e2e-test": "cypress run",
     "test-all-with-coverage": "npm run unit-test && npm run e2e-test && npx merge-cypress-jest-coverage"
   }
