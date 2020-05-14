@@ -16,6 +16,9 @@ jobs:
           
       - name: Move one directory out
         run: cd ..
+      
+      - name: List directory
+        run: ls
           
       - name: Create app directory from template
         run: npx create-react-app test-app --template file:./cra-template-crows
