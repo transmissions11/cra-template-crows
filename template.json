@@ -19,7 +19,9 @@
     "react-error-boundary": "^2.2.1",
     "react-firebase-hooks": "^2.1.1",
     "react-ios-pwa-prompt": "^1.7.0",
-    "react-router-dom": "^5.2.0"
+    "react-router-dom": "^5.2.0",
+
+    "react-scripts": "3.4.0"
   },
   "scripts": {
     "start": "react-scripts -r @cypress/instrument-cra start",
