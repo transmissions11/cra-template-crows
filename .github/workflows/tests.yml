@@ -25,14 +25,14 @@ jobs:
           record: false
         env:
           # These environment variables will be picked up by the start script
-          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           REACT_APP_FIREBASE_DATABASE_URL: ${{ secrets.REACT_APP_FIREBASE_DATABASE_URL }}
           REACT_APP_FIREBASE_API_KEY: ${{ secrets.REACT_APP_FIREBASE_API_KEY }}
 
       - name: Run unit tests with coverage
-        run: cd test-app && npm run unit-test
+        run: npm run unit-test
         env:
           CI: true
+        working-directory: ./test-app
 
       - name: Merge our test reports
         run: npx merge-cypress-jest-coverage
