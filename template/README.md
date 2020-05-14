@@ -30,3 +30,7 @@ _All template strings to be replaced are in `SCREAMING_SNAKE_CASE`_
 ## [DELETE THIS] Add these Github Secrets [DELETE THIS]
 
 - [ ] `CYPRESS_RECORD_KEY`: You'll get this by following this tutorial: https://docs.cypress.io/guides/dashboard/projects.html#Setup
+
+- [ ] `REACT_APP_FIREBASE_DATABASE_URL`: Something like: "https://test-url.firebaseio.com" (You will get this from the Firebase Dashboard)
+
+- [ ] `REACT_APP_FIREBASE_API_KEY`: Something like: "AIzaSyDihbBHL9q2nwre7TkQJjVjoR-wqyMYWJ4" (You will get this from the Firebase Dashboard)

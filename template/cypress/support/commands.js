@@ -25,3 +25,27 @@
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
 
 import "@testing-library/cypress/add-commands";
+
+Cypress.Commands.add("waitUntilNotLoading", () => {
+  cy.findByTestId("full-page-spinner").should("not.exist");
+  cy.findAllByText(/Loading/i).should("not.exist");
+});
+
+Cypress.Commands.add("isErrorBoxVisible", () => {
+  cy.findByText(/Error!/i).should("be.visible");
+});
+
+Cypress.Commands.add("signUp", ({ email, password, customPrivateKey } = {}) => {
+  cy.findByText(/Sign-Up/i).click();
+  cy.findByPlaceholderText("hello@example.com").clear().type(email);
+  cy.findByTestId("password").clear().type(password);
+  if (customPrivateKey)
+    cy.findByTestId("privateKey").clear().type(customPrivateKey);
+  cy.findByText("Sign Up").click();
+});
+
+Cypress.Commands.add("signIn", ({ email, password }) => {
+  cy.findByPlaceholderText("hello@example.com").clear().type(email);
+  cy.findByTestId("password").clear().type(password);
+  cy.findByText("Sign In").click();
+});

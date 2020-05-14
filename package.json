@@ -1,6 +1,6 @@
 {
   "name": "cra-template-crows",
-  "version": "7.5.0",
+  "version": "8.0.1",
   "keywords": [
     "react",
     "cypress",
@@ -16,5 +16,27 @@
   "files": [
     "template",
     "template.json"
-  ]
+  ],
+  "dependencies": {
+    "@chakra-ui/core": "^0.7.0",
+    "@cypress/code-coverage": "^3.7.0",
+    "@cypress/instrument-cra": "^1.1.1",
+    "@emotion/core": "^10.0.28",
+    "@emotion/styled": "^10.0.27",
+    "@loadable/component": "^5.12.0",
+    "@testing-library/cypress": "^6.0.0",
+    "@testing-library/jest-dom": "^5.3.0",
+    "@testing-library/react": "^10.0.2",
+    "@testing-library/user-event": "^10.0.1",
+    "cypress": "^4.3.0",
+    "emotion-theming": "^10.0.27",
+    "firebase": "^7.14.3",
+    "istanbul-lib-coverage": "^3.0.0",
+    "jest-environment-jsdom-sixteen": "^1.0.3",
+    "nyc": "^15.0.1",
+    "react-error-boundary": "^2.2.1",
+    "react-firebase-hooks": "^2.1.1",
+    "react-ios-pwa-prompt": "^1.7.0",
+    "react-router-dom": "^5.2.0"
+  }
 }

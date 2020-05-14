@@ -12,6 +12,11 @@ import PWAPrompt from "react-ios-pwa-prompt";
 
 import { ThemeProvider, CSSReset, theme } from "@chakra-ui/core";
 
+import { AuthProvider } from "./context/AuthContext";
+
+import ErrorPage from "./components/pages/ErrorPage";
+import { ErrorBoundary } from "react-error-boundary";
+
 ReactDOM.render(
   <>
     <PWAPrompt
@@ -23,7 +28,11 @@ ReactDOM.render(
     />
     <ThemeProvider theme={theme}>
       <CSSReset />
-      <App />
+      <AuthProvider>
+        <ErrorBoundary FallbackComponent={ErrorPage}>
+          <App />
+        </ErrorBoundary>
+      </AuthProvider>
     </ThemeProvider>
   </>,
   document.getElementById("root")
