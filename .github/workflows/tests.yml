@@ -14,17 +14,9 @@ jobs:
         with:
           node-version: '12.x'
           
-      - name: Move one directory out
-        run: cd ..
-      
-      - name: List directory
-        run: ls
-          
       - name: Create app directory from template
         run: npx create-react-app test-app --template file:./cra-template-crows
-
-      - name: Move into template directory
-        run: cd test-app
+        working-directory: ../
 
       - name: Run our Cypress E2E tests
         uses: cypress-io/github-action@v1
@@ -32,6 +24,7 @@ jobs:
           # Passing environment variables here will pass them as Cypress Environment Variables (https://docs.cypress.io/guides/guides/environment-variables.html), and will not be accessible to the start script
           # env: DATABASE_URL=${{ secrets.DATABASE_URL }}
 
+          working-directory: ../test-app
           start: npm start
           wait-on: "http://localhost:3000"
 
@@ -41,16 +34,19 @@ jobs:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           REACT_APP_FIREBASE_DATABASE_URL: ${{ secrets.REACT_APP_FIREBASE_DATABASE_URL }}
           REACT_APP_FIREBASE_API_KEY: ${{ secrets.REACT_APP_FIREBASE_API_KEY }}
-
+    
       - name: Run unit tests with coverage
         run: npm run unit-test
+        working-directory: ../test-app
         env:
           CI: true
 
       - name: Merge our test reports
         run: npx merge-cypress-jest-coverage
+        working-directory: ../test-app
 
       - name: Upload coverage report to Coveralls
         uses: coverallsapp/github-action@master
         with:
+          working-directory: ../test-app
           github-token: ${{ secrets.GITHUB_TOKEN }}
