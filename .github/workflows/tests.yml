@@ -9,11 +9,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       
-      - name: Use Node.js
-        uses: actions/setup-node@v1
-        with:
-          node-version: '10'
-          
       - name: Create app directory from template
         run: npx create-react-app test-app --template file:./cra-template-crows
         working-directory: ../
