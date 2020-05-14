@@ -5,7 +5,7 @@ import userEvent from "@testing-library/user-event";
 
 import FormInput from "./FormInput";
 
-test("renders error box with error text", async () => {
+test("renders form input and allows you to set input and provide placeholders", async () => {
   let formValue = "";
   const setFormValue = jest.fn((newFormValue) => {
     formValue = newFormValue;
