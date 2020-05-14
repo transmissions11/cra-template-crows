@@ -31,7 +31,7 @@ jobs:
           REACT_APP_FIREBASE_API_KEY: ${{ secrets.REACT_APP_FIREBASE_API_KEY }}
 
       - name: Run unit tests with coverage
-        run: npm run unit-test
+        run: npm run test
         working-directory: ../test-app
         env:
           CI: true
