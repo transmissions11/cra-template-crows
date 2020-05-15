@@ -23,7 +23,7 @@ const ErrorPage = ({ componentStack, error }) => {
         <Heading>Whoops! Looks like something went wrong!</Heading>
         <Text>
           You can either reload the page, or report this error to us on{" "}
-          <Link isExternal href="https://github.com/transmissionsdev/meridian">
+          <Link isExternal href="https://github.com/GITHUB_URL_SUFFIX">
             <u>our GitHub</u>
             <Icon name="external-link" mx="2px" />
           </Link>
