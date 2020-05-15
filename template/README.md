@@ -21,7 +21,7 @@ _All template strings to be replaced are in `SCREAMING_SNAKE_CASE`_
 
 - [ ] `GITHUB_URL_SUFFIX`: The suffix of github.com/ that links to your Github project
 
-  - Example: "transmissionsdev/cra-template-crows", "facebook/jest"
+  - Example: "TransmissionsDev/cra-template-crows", "facebook/jest"
 
 ## [DELETE THIS] Add these Github Secrets [DELETE THIS]
 
