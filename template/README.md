@@ -19,10 +19,6 @@ _All template strings to be replaced are in `SCREAMING_SNAKE_CASE`_
 
   - Example: "Tinder for dogs", "Chat for the 21st century"
 
-- [ ] `SHORT_DESCRIPTION`: A short description of your app.
-
-  - Example: "Tinder for dogs", "Chat for the 21st century"
-
 - [ ] `GITHUB_URL_SUFFIX`: The suffix of github.com/ that links to your Github project
 
   - Example: "transmissionsdev/cra-template-crows", "facebook/jest"
