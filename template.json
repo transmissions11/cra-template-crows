@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "@chakra-ui/core": "^0.7.0",
+    "@chakra-ui/core": "^0.8.0",
     "@cypress/code-coverage": "^3.7.0",
     "@cypress/instrument-cra": "^1.1.1",
     "@emotion/core": "^10.0.28",
