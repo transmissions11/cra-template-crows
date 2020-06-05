@@ -24,10 +24,14 @@ test("renders form input and allows you to set input and provide placeholders", 
 
   expect(screen.getByText("Name:")).toBeInTheDocument();
 
+  const toBeTypedText = "Ben Mayer";
+
   await userEvent.type(
     screen.getByPlaceholderText("This is a placeholder."),
-    "Ben Mayer"
+    toBeTypedText
   );
 
-  expect(setFormValue).toHaveBeenCalledWith("Ben Mayer");
+  for (var i = 0; i < toBeTypedText.length; i++) {
+    expect(setFormValue).toHaveBeenCalledWith(toBeTypedText.charAt(i));
+  }
 });
