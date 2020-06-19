@@ -4,7 +4,7 @@ import firebase from "../api/firebase";
 
 import { useAuthState } from "react-firebase-hooks/auth";
 
-export const AuthContext = React.createContext();
+export const AuthContext = React.createContext(undefined);
 
 export function AuthProvider({ children }) {
   const [user, loading] = useAuthState(firebase.auth());
