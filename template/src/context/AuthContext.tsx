@@ -3,23 +3,44 @@ import React from "react";
 import firebase from "../api/firebase";
 
 import { useAuthState } from "react-firebase-hooks/auth";
+import { User } from "firebase";
 
-export const AuthContext = React.createContext();
+type AuthObject =
+  | {
+      user: User | undefined;
+      loading: boolean;
+      signUp: (
+        email: string,
+        password: string
+      ) => Promise<firebase.auth.UserCredential>;
+      signIn: (
+        email: string,
+        password: string
+      ) => Promise<firebase.auth.UserCredential>;
+      signOut: () => Promise<void>;
+    }
+  | undefined;
 
-export function AuthProvider({ children }) {
+export const AuthContext = React.createContext<AuthObject>(undefined);
+
+interface Props {
+  children: JSX.Element;
+}
+
+export function AuthProvider(props: Props) {
   const [user, loading] = useAuthState(firebase.auth());
 
-  const signUp = (email, password) =>
+  const signUp = (email: string, password: string) =>
     firebase.auth().createUserWithEmailAndPassword(email, password);
 
-  const signIn = (email, password) =>
+  const signIn = (email: string, password: string) =>
     firebase.auth().signInWithEmailAndPassword(email, password);
 
   const signOut = () => firebase.auth().signOut();
 
   return (
     <AuthContext.Provider value={{ user, loading, signUp, signIn, signOut }}>
-      {children}
+      {props.children}
     </AuthContext.Provider>
   );
 }

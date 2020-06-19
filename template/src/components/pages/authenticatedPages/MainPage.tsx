@@ -7,7 +7,7 @@ const MainPage = () => {
 
   return (
     <>
-      <div>Hello {user.uid}!</div>
+      <div>Hello {user!.uid}!</div>
       <br />
       <Button variantColor="whatsapp" onClick={signOut}>
         Sign Out
@@ -15,7 +15,7 @@ const MainPage = () => {
       <Button
         variantColor="whatsapp"
         onClick={() => {
-          user.delete();
+          user!.delete();
         }}
       >
         Delete Account
