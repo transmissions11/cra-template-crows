@@ -22,10 +22,9 @@ jobs:
           start: npm start
           wait-on: "http://localhost:3000"
 
-          record: true
+          record: false
         env:
           # These environment variables will be picked up by the start script
-          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           REACT_APP_FIREBASE_DATABASE_URL: ${{ secrets.REACT_APP_FIREBASE_DATABASE_URL }}
           REACT_APP_FIREBASE_API_KEY: ${{ secrets.REACT_APP_FIREBASE_API_KEY }}
 
