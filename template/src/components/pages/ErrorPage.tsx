@@ -1,6 +1,5 @@
 /* istanbul ignore file */
 import React from "react";
-import PropTypes from "prop-types";
 
 import {
   Code,
@@ -16,7 +15,13 @@ import {
   AccordionItem,
 } from "@chakra-ui/core";
 
-const ErrorPage = ({ componentStack, error }) => {
+interface Props {
+  error?: Error;
+  componentStack?: string;
+  resetErrorBoundary: () => void;
+}
+
+const ErrorPage: React.FC<Props> = ({ componentStack, error }) => {
   return (
     <>
       <Box bg="red.600" w="100%" p={4} color="white">
@@ -38,7 +43,7 @@ const ErrorPage = ({ componentStack, error }) => {
             <AccordionIcon />
           </AccordionHeader>
           <AccordionPanel pb={4}>
-            <Code variantColor="red">{error.toString()}</Code>
+            <Code variantColor="red">{error?.toString()}</Code>
           </AccordionPanel>
         </AccordionItem>
 
@@ -56,11 +61,6 @@ const ErrorPage = ({ componentStack, error }) => {
       </Accordion>
     </>
   );
-};
-
-ErrorPage.propTypes = {
-  componentStack: PropTypes.string,
-  error: PropTypes.object,
 };
 
 export default ErrorPage;

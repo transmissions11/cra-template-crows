@@ -1,8 +1,20 @@
 import React from "react";
-import PropTypes from "prop-types";
+
 import { Box, Text, Input } from "@chakra-ui/core";
 
-const FormInput = ({ label, value, setValue, ...extraParams }) => (
+interface Props {
+  label: string;
+  value: string;
+  setValue: (value: string) => void;
+  [key: string]: any;
+}
+
+const FormInput: React.FC<Props> = ({
+  label,
+  value,
+  setValue,
+  ...extraParams
+}) => (
   <>
     <Box
       borderRadius="7px"
@@ -24,16 +36,12 @@ const FormInput = ({ label, value, setValue, ...extraParams }) => (
         borderColor="whatsapp.500"
         borderRadius="6px"
         value={value}
-        onChange={(event) => setValue(event.target.value)}
+        onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
+          setValue(event.target.value)
+        }
       />
     </Box>
   </>
 );
-
-FormInput.propTypes = {
-  label: PropTypes.string,
-  value: PropTypes.string,
-  setValue: PropTypes.func,
-};
 
 export default FormInput;

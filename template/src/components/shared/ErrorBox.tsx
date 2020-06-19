@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
+
 import {
   Box,
   Alert,
@@ -8,7 +8,11 @@ import {
   AlertDescription,
 } from "@chakra-ui/core";
 
-const ErrorBox = ({ error }) => {
+interface Props {
+  error: String | undefined | null;
+}
+
+const ErrorBox: React.FC<Props> = ({ error }) => {
   if (error) {
     return (
       <Box
@@ -27,10 +31,6 @@ const ErrorBox = ({ error }) => {
   } else {
     return null;
   }
-};
-
-ErrorBox.propTypes = {
-  error: PropTypes.string,
 };
 
 export default ErrorBox;
