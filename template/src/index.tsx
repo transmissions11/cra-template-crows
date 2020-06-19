@@ -8,6 +8,7 @@ import * as serviceWorker from "./serviceWorker";
 
 import "./index.css";
 
+// Remove this ignore when TypeScript PR gets merged.
 // @ts-ignore
 import PWAPrompt from "react-ios-pwa-prompt";
 
