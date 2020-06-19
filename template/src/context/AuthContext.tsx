@@ -23,11 +23,7 @@ type AuthObject =
 
 export const AuthContext = React.createContext<AuthObject>(undefined);
 
-interface Props {
-  children: JSX.Element;
-}
-
-export function AuthProvider(props: Props) {
+export const AuthProvider: React.FC = ({ children }) => {
   const [user, loading] = useAuthState(firebase.auth());
 
   const signUp = (email: string, password: string) =>
@@ -40,10 +36,10 @@ export function AuthProvider(props: Props) {
 
   return (
     <AuthContext.Provider value={{ user, loading, signUp, signIn, signOut }}>
-      {props.children}
+      {children}
     </AuthContext.Provider>
   );
-}
+};
 
 export function useAuth() {
   const context = React.useContext(AuthContext);
