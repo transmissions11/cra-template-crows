@@ -43,6 +43,6 @@
     "react-firebase-hooks": "^2.1.1",
     "react-ios-pwa-prompt": "^1.7.0",
     "react-router-dom": "^5.2.0",
-    "typescript": "^3.8.0"
+    "typescript": "^4.0.2"
   }
 }
