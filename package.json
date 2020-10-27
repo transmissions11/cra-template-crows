@@ -35,7 +35,7 @@
     "@types/react-dom": "^16.9.0",
     "cypress": "^5.0.0",
     "emotion-theming": "^10.0.27",
-    "firebase": "^7.14.3",
+    "firebase": "^8.0.0",
     "istanbul-lib-coverage": "^3.0.0",
     "jest-environment-jsdom-sixteen": "^1.0.3",
     "nyc": "^15.0.1",
