@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import FormInput from "../shared/FormInput";
 
-import { Box, Heading, Text, Button, Link, Stack } from "@chakra-ui/core";
+import { Box, Heading, Text, Button, Link, Stack } from "@chakra-ui/react";
 
 import ErrorBox from "../shared/ErrorBox";
 

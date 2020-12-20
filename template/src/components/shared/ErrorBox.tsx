@@ -6,7 +6,7 @@ import {
   AlertIcon,
   AlertTitle,
   AlertDescription,
-} from "@chakra-ui/core";
+} from "@chakra-ui/react";
 
 interface Props {
   error: String | undefined | null;

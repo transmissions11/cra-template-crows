@@ -1,14 +1,14 @@
 import React from "react";
-import { ThemeProvider } from "@chakra-ui/core";
+import { ChakraProvider } from "@chakra-ui/react";
 import { render, screen } from "@testing-library/react";
 
 import ErrorBox from "./ErrorBox";
 
 test("returns null if error is undefined", () => {
   render(
-    <ThemeProvider>
+    <ChakraProvider>
       <ErrorBox error={undefined} />
-    </ThemeProvider>
+    </ChakraProvider>
   );
 
   expect(screen.queryByText(/error/i)).not.toBeInTheDocument();
@@ -16,9 +16,9 @@ test("returns null if error is undefined", () => {
 
 test("renders error box with error text", () => {
   render(
-    <ThemeProvider>
+    <ChakraProvider>
       <ErrorBox error={"Uh oh something bad happened"} />
-    </ThemeProvider>
+    </ChakraProvider>
   );
 
   expect(screen.getByText("Uh oh something bad happened")).toBeInTheDocument();

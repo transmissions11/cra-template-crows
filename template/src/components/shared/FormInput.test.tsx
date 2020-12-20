@@ -1,5 +1,5 @@
 import React from "react";
-import { ThemeProvider } from "@chakra-ui/core";
+import { ChakraProvider } from "@chakra-ui/react";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
@@ -12,14 +12,14 @@ test("renders form input and allows you to set input and provide placeholders", 
   });
 
   render(
-    <ThemeProvider>
+    <ChakraProvider>
       <FormInput
         label="Name"
         value={formValue}
         setValue={setFormValue}
         placeholder="This is a placeholder."
       />
-    </ThemeProvider>
+    </ChakraProvider>
   );
 
   expect(screen.getByText("Name:")).toBeInTheDocument();
