@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "@chakra-ui/react": "^1.0.4",
-    "@cypress/code-coverage": "^3.7.0",
+    "@cypress/code-coverage": "^3.8.1",
     "@cypress/instrument-cra": "^1.1.1",
     "@emotion/react": "^11.1.2",
     "@emotion/styled": "^11.0.0",
