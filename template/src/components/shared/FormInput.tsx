@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Box, Text, Input } from "@chakra-ui/core";
+import { Box, Text, Input } from "@chakra-ui/react";
 
 interface Props {
   label: string;

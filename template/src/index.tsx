@@ -12,7 +12,7 @@ import "./index.css";
 // @ts-ignore
 import PWAPrompt from "react-ios-pwa-prompt";
 
-import { ThemeProvider, CSSReset, theme } from "@chakra-ui/core";
+import { ChakraProvider } from "@chakra-ui/react";
 
 import { AuthProvider } from "./context/AuthContext";
 
@@ -28,14 +28,13 @@ ReactDOM.render(
       copyBody="YOUR_APP works best when added to your homescreen. Without doing this, you may have a degraded experience."
       copyClosePrompt="Close"
     />
-    <ThemeProvider theme={theme}>
-      <CSSReset />
+    <ChakraProvider>
       <AuthProvider>
         <ErrorBoundary FallbackComponent={ErrorPage}>
           <App />
         </ErrorBoundary>
       </AuthProvider>
-    </ThemeProvider>
+    </ChakraProvider>
   </>,
   document.getElementById("root")
 );

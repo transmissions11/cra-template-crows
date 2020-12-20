@@ -1,6 +1,6 @@
 /* istanbul ignore file */
 import React from "react";
-import { Spinner } from "@chakra-ui/core";
+import { Spinner } from "@chakra-ui/react";
 
 const FullPageSpinner = () => {
   return (
